@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,17 +20,17 @@ Route::get('/', function () {
 
 //auth route for both 
 Route::group(['middleware' => ['auth']], function() { 
-    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'myprofile'])->name('dashboard');
 });
 
 // for users
 Route::group(['middleware' => ['auth', 'role:user']], function() { 
-    Route::get('/dashboard/myprofile', 'App\Http\Controllers\DashboardController@myprofile')->name('dashboard.myprofile');
+    Route::get('/dashboard/myprofile', [DashboardController::class, 'myprofile'])->name('dashboard.myprofile');
 });
 
 // for blogwriters
-Route::group(['middleware' => ['auth', 'role:blogwriter']], function() { 
-    Route::get('/dashboard/postcreate', 'App\Http\Controllers\DashboardController@postcreate')->name('dashboard.postcreate');
+Route::group(['middleware' => ['auth', 'role:professional']], function() { 
+    Route::get('/dashboard/postcreate', [DashboardController::class, 'postcreate'])->name('dashboard.postcreate');
 });
 
 require __DIR__.'/auth.php';
