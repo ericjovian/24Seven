@@ -11,7 +11,7 @@
                 <div class="d-flex p-6 flex-row">
                     <div>
                         Joko Widodo <br>
-                        Honda Jazz - B 1234 ZZ
+                        Honda Brio - B 1234 ZZ
                         <br>
                         Ban Kempes
                     </div>
