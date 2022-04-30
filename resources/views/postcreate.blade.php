@@ -15,10 +15,6 @@
                         <br>
                         Ban Kempes
                     </div>
-                    <div>
-                        <x-tick class="block h-20 w-auto fill-current text-gray-600" />
-                        <x-cross class="block h-20 w-auto fill-current text-gray-600" />
-                    </div>
                 </div>
                 <div class="p-6 bg-white border-b border-gray-200">
                     Jusuf Kalla <br>
