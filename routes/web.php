@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 //auth route for both 
 Route::group(['middleware' => ['auth']], function() { 
-    Route::get('/dashboard', [DashboardController::class, 'myprofile'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 // for users

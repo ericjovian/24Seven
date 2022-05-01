@@ -23,7 +23,7 @@
                     </x-nav-link>
                 </div>
                 @endif
-                @if (Auth::user()->hasRole('blogwriter'))
+                @if (Auth::user()->hasRole('professional'))
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard.postcreate')" :active="request()->routeIs('dashboard.postcreate')">
                         {{ __('Job List') }}
