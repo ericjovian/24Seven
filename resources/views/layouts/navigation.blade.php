@@ -7,6 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-20 w-auto fill-current text-gray-600" />
+                        
                     </a>
                 </div>
 
@@ -19,7 +20,7 @@
                 @if (Auth::user()->hasRole('user'))
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard.myprofile')" :active="request()->routeIs('dashboard.myprofile')">
-                        {{ __('My Profile') }}
+                        {{ __('My Orders') }}
                     </x-nav-link>
                 </div>
                 @endif
