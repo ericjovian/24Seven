@@ -13,15 +13,18 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('order', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->string('time');
+            $table->unsignedBigInteger('user_id')->nullable()->default(1);
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->time('time');
             $table->string('location');
-            $table->string('membertype');
             $table->unsignedInteger('price')->default(0);
             $table->string('plate_num');
+            $table->unsignedBigInteger('professional_id')->nullable()->default(1);
+            $table->foreign('professional_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
+            
         });
     }
 
