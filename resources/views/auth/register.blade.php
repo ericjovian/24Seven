@@ -48,10 +48,10 @@
 
                         <!-- Select Option Rol type -->
                         <div class="mt-4">
-                            <x-label for="role_id" value="{{ __('Register as:') }}" />
-                            <select name="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                                <option value="user">User</option>
-                                <option value="professional">Professional</option>
+                            <x-label for="user_role_id" value="{{ __('Register as:') }}" />
+                            <select name="user_role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                <option value="2">User</option>
+                                <option value="3">Professional</option>
                             </select>
                         </div>
 
