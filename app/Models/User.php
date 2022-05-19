@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laratrust\Traits\LaratrustUserTrait;
 
-class User extends Authenticatable
+class User extends Authenticatable 
 {
     use LaratrustUserTrait;
     use HasFactory, Notifiable;
@@ -24,6 +24,7 @@ class User extends Authenticatable
         'password',
         'isUserSubscribed',
         'user_role_id',
+        'remember_token'
         
 
     ];
