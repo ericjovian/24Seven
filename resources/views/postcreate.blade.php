@@ -11,13 +11,9 @@
                 <div class="d-flex p-6 flex-row">
                     <div>
                         Joko Widodo <br>
-                        Honda Jazz - B 1234 ZZ
+                        Honda Brio - B 1234 ZZ
                         <br>
                         Ban Kempes
-                    </div>
-                    <div>
-                        <x-tick class="block h-20 w-auto fill-current text-gray-600" />
-                        <x-cross class="block h-20 w-auto fill-current text-gray-600" />
                     </div>
                 </div>
                 <div class="p-6 bg-white border-b border-gray-200">
