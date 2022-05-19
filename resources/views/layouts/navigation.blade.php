@@ -7,6 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-20 w-auto fill-current text-gray-600" />
+                        
                     </a>
                 </div>
 
@@ -16,14 +17,14 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                @if (Auth::user()->hasRole('user'))
+                @if (Auth::user()->user_role_id == 2)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard.myprofile')" :active="request()->routeIs('dashboard.myprofile')">
-                        {{ __('My Profile') }}
+                        {{ __('My Orders') }}
                     </x-nav-link>
                 </div>
                 @endif
-                @if (Auth::user()->hasRole('blogwriter'))
+                @if (Auth::user()->user_role_id == 3)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard.postcreate')" :active="request()->routeIs('dashboard.postcreate')">
                         {{ __('Job List') }}

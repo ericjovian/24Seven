@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin:0px;
+    height:100%;
+}
+.container-padding{
+    padding-left: 3vw;
+    padding-right:3vw ;
+}
+@font-face {
+    font-family: montserrat-bold;
+    src: url(/fonts/montserrat/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+    font-family: montserrat-semibold;
+    src: url(/fonts/montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: montserrat-regular;
+    src: url(/fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+
+.view{
+    
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1)), url('/assets/customer-page/bg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.9;
+    
+
+}
+
+.login-position{
+    top:0.8vw;
+    right:0.5vw
+}
+.tot-position{
+    top:0.8vw;
+    right:4.5vw
+}
+.title-homepage{
+    font-family:montserrat-regular;
+    font-size:4vw;
+    padding:0vw 22vw
+}
+.slogan{
+    color:#E15F09;
+    font-family:montserrat-regular;
+    font-size:1.5vw;
+    padding:0vw 25vw
+}

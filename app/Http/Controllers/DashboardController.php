@@ -4,19 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Order;
+use App\Models\Role;
 
 class DashboardController extends Controller
 {
    public function index()
    {
-       if(Auth::user()->hasRole('user')){
-            return view('userdash');
-       }elseif(Auth::user()->hasRole('blogwriter')){
-            return view('blogwriterdash');
-       }elseif(Auth::user()->hasRole('admin')){
-        return view('dashboard');
+        if(Auth::user()->user_role_id == 2){
+          // $Order = Order::findOrFail(1);
+          // dd($Order);
+          return view('userdash');
+        }
+        elseif(Auth::user()->user_role_id ==3){
+          return view('professionaldashboard');
+        }elseif(Auth::user()->user_role_id == 1){
+              return view('dashboard');
+     }
+     //   if(Auth::user()->user_role->role=='User'){
+     //        return view('userdash');
+     //   }elseif(Auth::user()->user_role->role=='Professional'){
+     //        return view('professionaldashboard');
+     //   }elseif(Auth::user()->user_role->role=='Admin'){
+     //    return view('dashboard');
    }
-   }
+   
 
    public function myprofile()
    {

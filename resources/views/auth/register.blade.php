@@ -2,7 +2,8 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> -->
+                <p style="font-size:5vw;font-family:montserrat-bold;letter-spacing:0.5vw">24Seven</p>
             </a>
         </x-slot>
 
@@ -47,10 +48,10 @@
 
                         <!-- Select Option Rol type -->
                         <div class="mt-4">
-                            <x-label for="role_id" value="{{ __('Register as:') }}" />
-                            <select name="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                                <option value="user">User</option>
-                                <option value="blogwriter">Blog Writer</option>
+                            <x-label for="user_role_id" value="{{ __('Register as:') }}" />
+                            <select name="user_role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                <option value="2">User</option>
+                                <option value="3">Professional</option>
                             </select>
                         </div>
 
