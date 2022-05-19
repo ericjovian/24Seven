@@ -26,7 +26,7 @@
                       <label for="location">Location</label>
                       <input type="text" class="form-control" id="location" placeholder="1234 Main St">
                     </div>
-                    <button type="submit" class="btn btn-primary" href="{{ route('myprofile') }}">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
             </div>
         </div>
