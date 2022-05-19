@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
+use App\Models\User;
 use App\Models\Role;
 
 class DashboardController extends Controller
@@ -12,14 +13,16 @@ class DashboardController extends Controller
    public function index()
    {
         if(Auth::user()->user_role_id == 2){
-          // $Order = Order::findOrFail(1);
-          // dd($Order);
           return view('userdash');
         }
         elseif(Auth::user()->user_role_id ==3){
           return view('professionaldashboard');
         }elseif(Auth::user()->user_role_id == 1){
-              return view('dashboard');
+              $order = Order::all();
+              $users = User::all();
+              // $order = Order::findOrFail(1);
+              return view('dashboard', compact('order','users'));
+
      }
      //   if(Auth::user()->user_role->role=='User'){
      //        return view('userdash');

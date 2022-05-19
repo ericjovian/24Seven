@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('location');
             $table->unsignedInteger('price')->default(0)->nullable();
             $table->string('plate_num');
-            $table->unsignedBigInteger('professional_id')->nullable()->default(1);
+            $table->unsignedBigInteger('professional_id')->nullable()->default(1);#user_id si professional
             $table->foreign('professional_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
             
