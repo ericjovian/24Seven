@@ -28,15 +28,4 @@ class DashboardController extends Controller
      //   }elseif(Auth::user()->user_role->role=='Admin'){
      //    return view('dashboard');
    }
-   
-
-   public function myprofile()
-   {
-    return view('myprofile');
-   }
-
-   public function postcreate()
-   {
-    return view('postcreate');
-   }
 }

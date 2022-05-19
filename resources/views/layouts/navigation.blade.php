@@ -19,7 +19,7 @@
                 </div>
                 @if (Auth::user()->user_role_id == 2)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard.myprofile')" :active="request()->routeIs('dashboard.myprofile')">
+                    <x-nav-link :href="route('insertOrder')" :active="request()->routeIs('insertOrder')">
                         {{ __('My Orders') }}
                     </x-nav-link>
                 </div>
