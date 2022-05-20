@@ -19,9 +19,10 @@ class DashboardController extends Controller
           return view('professionaldashboard');
         }elseif(Auth::user()->user_role_id == 1){
               $order = Order::all();
-              $users = User::all();
+              
+              
               // $order = Order::findOrFail(1);
-              return view('dashboard', compact('order','users'));
+              return view('dashboard', compact('order'));
 
      }
      //   if(Auth::user()->user_role->role=='User'){

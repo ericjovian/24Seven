@@ -14,17 +14,27 @@
                       <!-- Time -->
                       <div class="form-group col-md-1.5">
                         <label for="time">Time</label>
-                        <input type="time" name="time" class="form-control" id="time" placeholder="--:--">
+                        <input type="time" name="time" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" placeholder="--:--">
                       </div>
                       <!-- Plate Num -->
                       <div class="form-group col-md-3">
                         <label for="plate_num">Plate Number</label>
-                        <input type="text" name="plate_num" class="form-control" id="plate_num" placeholder="ABC 000">
+                        <input type="text" name="plate_num"class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" placeholder="ABC 000">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="location">Location</label>
-                      <input type="text" name="location" class="form-control" id="location" placeholder="1234 Main St">
+                      <input type="text" name="location"class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                      <x-label for="price" value="" />
+                          <select name="price" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                              <option value="30">Flat batteries</option>
+                              <option value="40">Flat tyres</option>
+                              <option value="50">Towing</option>
+                              <option value="60">Emergency fuel delivery</option>
+                              <option value="70">Locked out</option>
+                          </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
