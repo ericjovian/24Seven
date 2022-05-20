@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\MembershipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth']], function() { 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard/myprofile', [OrderController::class, 'myprofile'])->name('insertOrder');
+    Route::get('/dashboard/membership', [MembershipController::class, 'index'])->name('dashboard.membership');
     Route::post('/dashboard/myprofile', [OrderController::class, 'insert'])->name('insertOrder');
     Route::get('/dashboard/postcreate', [DashboardController::class, 'postcreate'])->name('dashboard.postcreate');
 });
