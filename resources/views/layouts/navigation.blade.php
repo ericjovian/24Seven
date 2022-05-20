@@ -23,6 +23,12 @@
                         {{ __('My Orders') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('dashboard.membership')" :active="request()->routeIs('dashboard.membership')">
+                        {{ __('Join Membership') }}
+                    </x-nav-link>
+                </div>
+                
                 @endif
                 @if (Auth::user()->user_role_id == 3)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
