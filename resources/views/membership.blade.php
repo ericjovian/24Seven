@@ -42,6 +42,33 @@
 
               </div>
               <hr>
+              <div class="d-flex justify-content-between" style="padding-top:2vw;padding-bottom:2vw">
+                <div class="" style="font-family:montserrat-bold">
+                  <i class="fas fa-car-battery" style="font-size:7vw"></i>
+                  <p style="font-size:1.2vw">Flat Batteries</p>
+                  <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
+                </div>
+                <div class="" style="font-family:montserrat-bold">
+                  <i class="fas fa-key" style="font-size:7vw"></i>
+                  <p style="font-size:1.2vw">Flat Batteries</p>
+                  <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
+                </div>
+                <div class="" style="font-family:montserrat-bold">
+                  <i class="fas fa-gas-pump" style="font-size:7vw"></i>
+                  <p style="font-size:1.2vw">Emergency fuel delivery</p>
+                  <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
+                </div>
+                <div class="" style="font-family:montserrat-bold">
+                  <i class="fas fa-cog" style="font-size:7vw"></i>
+                  <p style="font-size:1.2vw">Towing</p>
+                  <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
+                </div>
+                <div class="" style="font-family:montserrat-bold">
+                  <img src="/assets/customer-page/flat-tire.png" style="margin-left:3vw;width:8vw" class="img-fluid" alt="">
+                  <p style="font-size:1.2vw">Flat tires</p>
+                  <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
+                </div>
+              </div>
                             
             </div> 
                     
