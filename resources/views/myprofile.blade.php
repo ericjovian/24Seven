@@ -12,14 +12,24 @@
                     @csrf
                     <div class="form-row">
                       <!-- Time -->
-                      <div class="form-group col-md-1.5">
+                      <div class="form-group col-md-4">
                         <label for="time">Time</label>
                         <input type="time" name="time" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" placeholder="--:--">
                       </div>
                       <!-- Plate Num -->
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-md-4">
                         <label for="plate_num">Plate Number</label>
                         <input type="text" name="plate_num"class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" placeholder="ABC 000">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="car_model">Car Model</label>
+                          <select name="car_model" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                            <option>SUV</option>
+                            <option>Sedan</option>
+                            <option>Pick-up truck</option>
+                            <option>Mini Van</option>
+                            <option>Others...</option>
+                          </select>
                       </div>
                     </div>
                     <div class="form-group">

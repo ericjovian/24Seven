@@ -22,6 +22,7 @@ class OrderController extends Controller
         $table->user_id = Auth::user()->id;
         $table->time = $request->time;
         $table->plate_num = $request->plate_num;
+        $table->car_model = $request->car_model;
         $table->location = $request->location;
         $table->price = $request->price;
         $table->save();

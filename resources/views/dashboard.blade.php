@@ -169,6 +169,7 @@
                                     <thead>
                                         <tr>
                                             <th>Name</th>
+                                            <th>Car Model</th>
                                             <th>Plate Number</th>
                                             <th>Time</th>
                                             <th>Location</th>
@@ -178,8 +179,8 @@
                                     <tbody>
                                         @foreach($order as $ordr)
                                             <tr>
-                                                
                                                 <td>{{ $ordr->user->name }}</td>
+                                                <td>{{ $ordr->car_model }}</td>
                                                 <td>{{ $ordr->plate_num }}</td>
                                                 <td>{{ $ordr->time }}</td>
                                                 <td>{{ $ordr->location }}</td>
