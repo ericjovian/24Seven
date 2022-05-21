@@ -50,7 +50,7 @@
                 </div>
                 <div class="" style="font-family:montserrat-bold">
                   <i class="fas fa-key" style="font-size:7vw"></i>
-                  <p style="font-size:1.2vw">Flat Batteries</p>
+                  <p style="font-size:1.2vw">Locked Out</p>
                   <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
                 </div>
                 <div class="" style="font-family:montserrat-bold">
@@ -64,7 +64,7 @@
                   <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
                 </div>
                 <div class="" style="font-family:montserrat-bold">
-                  <img src="/assets/customer-page/flat-tire.png" style="margin-left:3vw;width:8vw" class="img-fluid" alt="">
+                  <img src="/assets/customer-page/flat-tire.png" style="margin-left:3.5vw;width:7vw" class="img-fluid" alt="">
                   <p style="font-size:1.2vw">Flat tires</p>
                   <p style="font-size:0.7vw">We can give you a jump-start, or arrange a replacement battery on the spot</p>
                 </div>

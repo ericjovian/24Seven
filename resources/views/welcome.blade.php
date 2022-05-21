@@ -65,7 +65,7 @@
                     <p class="title-homepage">EXPLORE THE OPEN ROAD</p>
                 </div>
                 <div class="col-md-12" style="padding-top:20vw">
-                    <p class="slogan">You worry about the destination, let us worry about the journey. Get 24/7 roadside assitance with 24 Seven</p>
+                    <p class="slogan">You worry about the destination, let us worry about the journey. Get 24/7 roadside assitance with 24Seven</p>
                 </div>
             </div>
             
