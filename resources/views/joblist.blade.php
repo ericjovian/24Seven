@@ -21,7 +21,7 @@
                             @csrf
                             @method('put')
                             <input type="hidden" name="order_id" value="{{$orders->id}}">
-                            <button type="submit" name="action" value="accept" class="btn btn-success">Accept</button>
+                            <button type="submit" style="margin-top:2vw" name="action" value="accept" class="btn btn-success">Accept</button>
                         </form>
                     </div>
                 </div>

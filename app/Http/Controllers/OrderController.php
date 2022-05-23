@@ -51,6 +51,6 @@ class OrderController extends Controller
      $order->status = 'Accepted';
      $order->professional_id = Auth::user()->id;
      $order->save();
-     return view('joblist');
+     return redirect('/dashboard');
     }
 }

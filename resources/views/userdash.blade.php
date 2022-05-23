@@ -19,7 +19,7 @@
                         <div class="card" style="width: 18rem;margin-top:2vw;border:none">
                             <div class="card-body">
                                 
-                                <h5 class="card-title">On-going Order</h5>
+                                <h1 class="card-title" style="font-size:1.5vw">On-going Order</h1>
                                 <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
