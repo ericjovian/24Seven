@@ -23,10 +23,12 @@ Route::get('/', function () {
 //auth route for both 
 Route::group(['middleware' => ['auth']], function() { 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/dashboard/myprofile', [OrderController::class, 'myprofile'])->name('insertOrder');
+    Route::get('/dashboard/myprofile', [OrderController::class, 'myprofile'])->name('dashboard.index');
     Route::get('/dashboard/membership', [MembershipController::class, 'index'])->name('dashboard.membership');
+    Route::put('/dashboard/membership', [MembershipController::class, 'updateMember'])->name('dashboard.updatemember');
     Route::post('/dashboard/myprofile', [OrderController::class, 'insert'])->name('insertOrder');
-    Route::get('/dashboard/postcreate', [DashboardController::class, 'postcreate'])->name('dashboard.postcreate');
+    Route::get('/dashboard/professional', [OrderController::class, 'orderprofessional'])->name('joblist');
+    Route::put('/dashboard/professional', [OrderController::class, 'updateStatusOrder'])->name('update.status');
 });
 
 // // for users

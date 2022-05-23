@@ -13,6 +13,16 @@
                     Jobs Completed :<em style="color:dodgerblue">14</em><br>
                     Current Earnings :<em style="color:green">$2,143</em>
                 </div>
+                @foreach($on_going_order as $order)
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <p>Accepted Order</p>
+                    <p>Customer Name: {{$order->user->name}}</p>
+                    <p>Time: {{$order->time}}</p>
+                    <p>Location: {{$order->location}}</p>
+                    <p>Price: {{$order->price}}</p>
+                    <p>Car model: {{$order->car_model}}</p>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>

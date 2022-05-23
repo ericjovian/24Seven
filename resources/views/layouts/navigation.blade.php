@@ -19,7 +19,7 @@
                 </div>
                 @if (Auth::user()->user_role_id == 2)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('insertOrder')" :active="request()->routeIs('insertOrder')">
+                    <x-nav-link :href="route('dashboard.index')" :active="request()->routeIs('dashboard.index')">
                         {{ __('My Orders') }}
                     </x-nav-link>
                 </div>
@@ -32,7 +32,7 @@
                 @endif
                 @if (Auth::user()->user_role_id == 3)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard.postcreate')" :active="request()->routeIs('dashboard.postcreate')">
+                    <x-nav-link :href="route('joblist')" :active="request()->routeIs('joblist')">
                         {{ __('Job List') }}
                     </x-nav-link>
                 </div>

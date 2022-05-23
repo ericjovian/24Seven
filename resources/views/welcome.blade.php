@@ -55,7 +55,7 @@
                                     @endauth
                                 </div>
                             @endif
-                               
+                            
                         </div> 
                     
                 </nav>
@@ -68,6 +68,7 @@
                     <p class="slogan">You worry about the destination, let us worry about the journey. Get 24/7 roadside assitance with 24Seven</p>
                 </div>
             </div>
+            
             
                 
                 
