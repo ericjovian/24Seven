@@ -20,8 +20,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('isUserSubscribed')->nullable()->default(0);
+            $table->string('creditCard')->nullable();
             $table->unsignedBigInteger('user_role_id')->nullable()->default(1);
             $table->foreign('user_role_id')->references('id')->on('user_roles')->onDelete('set null');
+            
             $table->rememberToken();
             $table->timestamps();
             

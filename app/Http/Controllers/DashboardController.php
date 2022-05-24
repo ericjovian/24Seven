@@ -13,12 +13,19 @@ class DashboardController extends Controller
    public function index()
    {
         if(Auth::user()->user_role_id == 2){
-          return view('userdash');
+          $order = Order::where('user_id',Auth::user()->id)->get();
+          
+          
+          return view('userdash', compact('order'));
         }
         elseif(Auth::user()->user_role_id ==3){
-          return view('professionaldashboard');
+          
+          $on_going_order = Order::where('professional_id',Auth::user()->id)->get();
+          
+          return view('professionaldashboard',compact('on_going_order'));
         }elseif(Auth::user()->user_role_id == 1){
               $order = Order::all();
+              
               
               
               // $order = Order::findOrFail(1);
