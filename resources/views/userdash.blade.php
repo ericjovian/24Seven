@@ -13,11 +13,13 @@
             </div>
         </div>
     </div>
+    <a href="dashboard/membership" class="text-decoration-none">
     <div class="card fixed-bottom bg-warning">
         {{-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
-        <div class="card-body text-center">
+        <div class="card-body text-center" >
           <h5 class="card-title">Subscribe Now!</h5>
           <p class="card-text">Subscribe now for only $4.99(Limited Offer).</p>
         </div>
     </div>
+    </a>
 </x-app-layout>
