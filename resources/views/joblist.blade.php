@@ -13,7 +13,7 @@
                     <div>
                         <p>Customer Name : {{$orders->user->name}}</p>
                         <p>Location : {{$orders->location}}</p>
-                        <p>Price: {{$orders->price}}</p>
+                        <p>Price: ${{$orders->price}}</p>
                         <p>Plate Number : {{$orders->plate_num}}</p>
                         <p>Car Model : {{$orders->car_model}}</p>
                         <p>Time : {{$orders->time}}</p>
