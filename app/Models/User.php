@@ -23,6 +23,7 @@ class User extends Authenticatable
         'email',
         'password',
         'isUserSubscribed',
+        'creditCard',
         'user_role_id',
         'remember_token'
         

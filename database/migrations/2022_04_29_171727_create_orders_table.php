@@ -24,6 +24,7 @@ class CreateOrdersTable extends Migration
             $table->string('car_model');
             $table->unsignedBigInteger('professional_id')->nullable();#user_id si professional
             $table->foreign('professional_id')->references('id')->on('users')->onDelete('set null');
+            $table->string('status')->default('Waiting for Professional');
             $table->timestamps();
             
         });
