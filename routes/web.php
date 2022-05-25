@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/dashboard/myprofile', [OrderController::class, 'insert'])->name('insertOrder');
     Route::get('/dashboard/professional', [OrderController::class, 'orderprofessional'])->name('joblist');
     Route::put('/dashboard/professional', [OrderController::class, 'updateStatusOrder'])->name('update.status');
+    Route::put('/dashboard', [OrderController::class, 'updateOrderPayment'])->name('updateOrderStatus');
 });
 
 // // for users

@@ -53,4 +53,12 @@ class OrderController extends Controller
      $order->save();
      return redirect('/dashboard');
     }
+
+    public function updateOrderPayment(Request $request)
+    {
+     $order = Order::findOrFail($request->order_id);
+     $order->status = 'Finished';
+     $order->save();
+     return redirect('/dashboard');
+    }
 }

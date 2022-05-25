@@ -15,11 +15,35 @@
                     
                     
                     @foreach($order as $ord)
+                    @if($ord->status == 'Accepted')
                     <div class="col-md-4">
-                        <div class="card" style="width: 18rem;margin-top:2vw;border:none">
+                        <div class="card mt-0" style="width: 18rem;margin-top:2vw;border:none">
                             <div class="card-body">
                                 
-                                <h1 class="card-title" style="font-size:1.5vw">On-going Order</h1>
+                                <h1 class="card-title mb-0" style="font-size:1.5vw">Accepted</h1>
+                                <img src="/assets/customer-page/on-going.png" style="width:3vw;margin-bottom:1vw    " alt="">
+                                <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Plate Number: {{ $ord->plate_num }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Model: {{ $ord->car_model }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Status: {{ $ord->status }}</h6>
+                            </div>
+                        </div>
+                        <form action="{{ route('updateOrderStatus') }}" method="POST">
+                            @csrf
+                            @method('put')
+                            <input type="hidden" name="order_id" value="{{$ord->id}}">
+                            <button type="submit" name="action" value="pay"  style="margin: 0vw 0vw 2vw 1vw" class="btn btn-success">Pay</button>
+                        </form>
+                    </div>
+                    @elseif($ord->status =='Waiting for Professional')
+                    <div class="col-md-4">
+                        <div class="card mt-0" style="width: 18rem;margin-top:2vw;border:none">
+                            <div class="card-body">
+                                
+                                <h1 class="card-title" style="font-size:1.5vw">On-Going Order</h1>
+                                
                                 <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
@@ -29,6 +53,25 @@
                             </div>
                         </div>
                     </div>
+                    @elseif($ord->status =='Finished')
+                    <div class="col-md-4">
+                        <div class="card mt-0" style="width: 18rem;margin-top:2vw;border:none">
+                            <div class="card-body">
+                                
+                                <h1 class="card-title mb-0" style="font-size:1.5vw">History</h1>
+                                <img src="/assets/customer-page/history.png" style="width:3vw;margin-bottom:1vw    " alt="">
+                                
+                                <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Plate Number: {{ $ord->plate_num }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Model: {{ $ord->car_model }}</h6>
+                                <h6 class="card-subtitle mb-2 ">Status: {{ $ord->status }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    
                     @endforeach  
                     
                 </div>
