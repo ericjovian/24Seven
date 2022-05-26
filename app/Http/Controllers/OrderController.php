@@ -59,6 +59,15 @@ class OrderController extends Controller
      $order = Order::findOrFail($request->order_id);
      $order->status = 'Finished';
      $order->save();
-     return redirect('/dashboard');
+     return redirect('/dashboard/history');
     }
+
+    public function historyOrderIndex(Request $request)
+    {
+        $order = Order::where('user_id',Auth::user()->id)->get();
+        
+        return view('historypage',compact('order'));
+    }
+
+
 }

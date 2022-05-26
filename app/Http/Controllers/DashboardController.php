@@ -24,6 +24,7 @@ class DashboardController extends Controller
           
           
           
+          
           return view('professionaldashboard',compact('on_going_order'));
         }elseif(Auth::user()->user_role_id == 1){
               $order = Order::all();

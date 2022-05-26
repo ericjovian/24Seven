@@ -1,3 +1,7 @@
+
+</style>
+
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -10,6 +14,8 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in as a user!
                 </div>
+                
+                
                 <div class="row m-0 row-cols-3">
                     
                     
@@ -53,23 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    @elseif($ord->status =='Finished')
-                    <div class="col-md-4">
-                        <div class="card mt-0" style="width: 18rem;margin-top:2vw;border:none">
-                            <div class="card-body">
-                                
-                                <h1 class="card-title mb-0" style="font-size:1.5vw">History</h1>
-                                <img src="/assets/customer-page/history.png" style="width:3vw;margin-bottom:1vw    " alt="">
-                                
-                                <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
-                                <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
-                                <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
-                                <h6 class="card-subtitle mb-2 ">Plate Number: {{ $ord->plate_num }}</h6>
-                                <h6 class="card-subtitle mb-2 ">Model: {{ $ord->car_model }}</h6>
-                                <h6 class="card-subtitle mb-2 ">Status: {{ $ord->status }}</h6>
-                            </div>
-                        </div>
-                    </div>
+                    
                     @endif
                     
                     @endforeach  
@@ -90,4 +80,8 @@
         </div>
     </div>
     @endif
+
+    
+
+    
 </x-app-layout>

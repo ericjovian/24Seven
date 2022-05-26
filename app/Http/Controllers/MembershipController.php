@@ -32,6 +32,6 @@ class MembershipController extends Controller
     // }
     
         
-     return view('membership');
+     return redirect('/dashboard/membership');
     }
 }

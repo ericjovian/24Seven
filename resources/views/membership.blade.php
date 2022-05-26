@@ -77,8 +77,11 @@
               <hr>
 
               <!-- start join now modal -->
+              @if(Auth::user()->isUserSubscribed == 0)
               <button type="button" style="margin-top:2vw" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Join Now</button>
-              
+              @else
+              <p style="font-size:1.2vw;font-family:montserrat-bold;padding-top:2vw">YOU ARE MEMBER</p>
+              @endif
               <form action="{{ route('dashboard.updatemember') }}" method="POST">
                 @csrf
                 @method('put')

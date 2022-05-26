@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +26,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard/myprofile', [OrderController::class, 'myprofile'])->name('dashboard.index');
     Route::get('/dashboard/membership', [MembershipController::class, 'index'])->name('dashboard.membership');
+    Route::get('/dashboard/history', [ReviewController::class, 'historyOrderIndex'])->name('dashboard.history');
     Route::put('/dashboard/membership', [MembershipController::class, 'updateMember'])->name('dashboard.updatemember');
     Route::post('/dashboard/myprofile', [OrderController::class, 'insert'])->name('insertOrder');
+    Route::post('/dashboard/history', [ReviewController::class, 'insertReview'])->name('insertReview');
     Route::get('/dashboard/professional', [OrderController::class, 'orderprofessional'])->name('joblist');
     Route::put('/dashboard/professional', [OrderController::class, 'updateStatusOrder'])->name('update.status');
     Route::put('/dashboard', [OrderController::class, 'updateOrderPayment'])->name('updateOrderStatus');
