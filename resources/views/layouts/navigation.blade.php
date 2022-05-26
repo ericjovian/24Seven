@@ -29,6 +29,11 @@
                         {{ __('Join Membership') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('dashboard.history')" :active="request()->routeIs('dashboard.history')">
+                        {{ __('Order History') }}
+                    </x-nav-link>
+                </div>
                 
                 @endif
                 @if (Auth::user()->user_role_id == 3)

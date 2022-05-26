@@ -11,7 +11,13 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     Welcome to Roadside Professional's Dashboard.<br>
                     Jobs Completed :<em style="color:dodgerblue">{{ count($on_going_order) }}</em><br>
-                    Current Earnings :<em style="color:green">$2,143</em>
+                    @php $counter = 0; @endphp
+                    @foreach($on_going_order as $ordr)
+                    @if($ordr->status == 'Finished' )
+                    @php $counter = $ordr->price + $counter; @endphp
+                    @endif
+                    @endforeach
+                    Current Earnings :<em style="color:green">${{ $counter}}</em>
                 </div>
                 @foreach($on_going_order as $order)
                 <div class="p-6 bg-white border-b border-gray-200">
@@ -19,7 +25,7 @@
                     <p>Customer Name: {{$order->user->name}}</p>
                     <p>Time: {{$order->time}}</p>
                     <p>Location: {{$order->location}}</p>
-                    <p>Price: {{$order->price}}</p>
+                    <p>Price: ${{$order->price}}</p>
                     <p>Car model: {{$order->car_model}}</p>
                 </div>
                 @endforeach

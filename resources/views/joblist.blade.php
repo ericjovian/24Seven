@@ -17,6 +17,7 @@
                         <p>Plate Number : {{$orders->plate_num}}</p>
                         <p>Car Model : {{$orders->car_model}}</p>
                         <p>Time : {{$orders->time}}</p>
+                           
                         <form action="{{ route('update.status') }}" method="POST">
                             @csrf
                             @method('put')
