@@ -20,6 +20,7 @@
                         <div class="col-md-12 mt-3">
                             <div class="card mt-0" style="width: 18rem;margin-top:2vw;border:none">
                                 <div class="mt-0">
+                                    <h6 class="card-subtitle mb-2 ">Professional Name: {{ $ord->professional->name }}</h6>
                                     <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
                                     <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
                                     <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
