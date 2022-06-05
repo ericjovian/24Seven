@@ -28,6 +28,7 @@
                                 
                                 <h1 class="card-title mb-0" style="font-size:1.5vw">Accepted</h1>
                                 <img src="/assets/customer-page/on-going.png" style="width:3vw;margin-bottom:1vw    " alt="">
+                                <h6 class="card-subtitle mb-2 ">Professional Name: {{ $ord->professional->name }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Time: {{ $ord->time }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Location: {{ $ord->location }}</h6>
                                 <h6 class="card-subtitle mb-2 ">Price: $ {{ $ord->price }}</h6>
